@@ -28,14 +28,14 @@
             this.lblSalario = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtSalario = new System.Windows.Forms.TextBox();
             this.rbMasculino = new System.Windows.Forms.RadioButton();
             this.rbFeminino = new System.Windows.Forms.RadioButton();
             this.rbCLT = new System.Windows.Forms.RadioButton();
             this.rbPJ = new System.Windows.Forms.RadioButton();
-            this.rAutonomo = new System.Windows.Forms.RadioButton();
+            this.rbAutonomo = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -88,31 +88,33 @@
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.SalvarAction);
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtNome.Location = new System.Drawing.Point(16, 40);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(316, 20);
+            this.txtNome.TabIndex = 7;
             // 
-            // textBox2
+            // txtEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 132);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(316, 20);
-            this.textBox2.TabIndex = 8;
+            this.txtEmail.Location = new System.Drawing.Point(16, 132);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(316, 20);
+            this.txtEmail.TabIndex = 8;
             // 
-            // textBox3
+            // txtSalario
             // 
-            this.textBox3.Location = new System.Drawing.Point(16, 218);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 9;
+            this.txtSalario.Location = new System.Drawing.Point(16, 218);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(100, 20);
+            this.txtSalario.TabIndex = 9;
             // 
             // rbMasculino
             // 
             this.rbMasculino.AutoSize = true;
+            this.rbMasculino.Checked = true;
             this.rbMasculino.Location = new System.Drawing.Point(16, 19);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(73, 17);
@@ -136,6 +138,7 @@
             // rbCLT
             // 
             this.rbCLT.AutoSize = true;
+            this.rbCLT.Checked = true;
             this.rbCLT.Location = new System.Drawing.Point(12, 19);
             this.rbCLT.Name = "rbCLT";
             this.rbCLT.Size = new System.Drawing.Size(45, 17);
@@ -155,22 +158,22 @@
             this.rbPJ.Text = "PJ";
             this.rbPJ.UseVisualStyleBackColor = true;
             // 
-            // rAutonomo
+            // rbAutonomo
             // 
-            this.rAutonomo.AutoSize = true;
-            this.rAutonomo.Location = new System.Drawing.Point(156, 19);
-            this.rAutonomo.Name = "rAutonomo";
-            this.rAutonomo.Size = new System.Drawing.Size(73, 17);
-            this.rAutonomo.TabIndex = 14;
-            this.rAutonomo.TabStop = true;
-            this.rAutonomo.Text = "Autônomo";
-            this.rAutonomo.UseVisualStyleBackColor = true;
+            this.rbAutonomo.AutoSize = true;
+            this.rbAutonomo.Location = new System.Drawing.Point(156, 19);
+            this.rbAutonomo.Name = "rbAutonomo";
+            this.rbAutonomo.Size = new System.Drawing.Size(73, 17);
+            this.rbAutonomo.TabIndex = 14;
+            this.rbAutonomo.TabStop = true;
+            this.rbAutonomo.Text = "Autônomo";
+            this.rbAutonomo.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rbPJ);
             this.groupBox1.Controls.Add(this.rbCLT);
-            this.groupBox1.Controls.Add(this.rAutonomo);
+            this.groupBox1.Controls.Add(this.rbAutonomo);
             this.groupBox1.Location = new System.Drawing.Point(338, 116);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(400, 80);
@@ -196,9 +199,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 492);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSalario);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblSalario);
@@ -206,7 +209,7 @@
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.groupBox1);
             this.Name = "CadastroFuncionario";
-            this.Text = "CadastroFuncionario";
+            this.Text = "Cadastro de Funcionário";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -223,14 +226,14 @@
         private System.Windows.Forms.Label lblSalario;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtSalario;
         private System.Windows.Forms.RadioButton rbMasculino;
         private System.Windows.Forms.RadioButton rbFeminino;
         private System.Windows.Forms.RadioButton rbCLT;
         private System.Windows.Forms.RadioButton rbPJ;
-        private System.Windows.Forms.RadioButton rAutonomo;
+        private System.Windows.Forms.RadioButton rbAutonomo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
     }

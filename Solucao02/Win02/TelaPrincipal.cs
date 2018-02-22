@@ -12,8 +12,8 @@ namespace Win02 {
 
         }
 
-        private void button1_Click(object sender, EventArgs e) {
-
+        private void NovoAction(object sender, EventArgs e) {
+            new CadastroFuncionario().Show();
         }
     }
 }
