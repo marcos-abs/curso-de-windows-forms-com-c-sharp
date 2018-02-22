@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Win02.Modelo;
+using System.ComponentModel.DataAnnotations;
 
 namespace Win02 {
     public partial class CadastroFuncionario : Form {
@@ -38,8 +39,24 @@ namespace Win02 {
             funcionario.DataCadastro = DateTime.Now;
 
             // validar os dados
+            List<ValidationResult> listErros = new List<ValidationResult>();
+            ValidationContext contexto = new ValidationContext(funcionario);
+            bool validado = Validator.TryValidateObject(funcionario, contexto, listErros, true);
+            if (validado) {
+                // validacao ok.
+            } else {
+                //validacao erro.
+                StringBuilder sb = new StringBuilder();
+                foreach (ValidationResult erro in listErros) {
+                    sb.Append(erro.ErrorMessage + "\n");
+                }
+                lblErros.Text = sb.ToString();
+            }
+
             // salvar os dados
+
             // fechar e atualizar a TelaPrincipal
+
         }
     }
 }

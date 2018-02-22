@@ -26,7 +26,7 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblSalario = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblErros = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -69,16 +69,16 @@
             this.lblSalario.TabIndex = 2;
             this.lblSalario.Text = "Salário:";
             // 
-            // label6
+            // lblErros
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(347, 225);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "label6";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.lblErros.AutoSize = true;
+            this.lblErros.ForeColor = System.Drawing.Color.Red;
+            this.lblErros.Location = new System.Drawing.Point(347, 225);
+            this.lblErros.Name = "lblErros";
+            this.lblErros.Size = new System.Drawing.Size(35, 13);
+            this.lblErros.TabIndex = 5;
+            this.lblErros.Text = "label6";
+            this.lblErros.Click += new System.EventHandler(this.label6_Click);
             // 
             // btnSalvar
             // 
@@ -130,7 +130,6 @@
             this.rbFeminino.Name = "rbFeminino";
             this.rbFeminino.Size = new System.Drawing.Size(67, 17);
             this.rbFeminino.TabIndex = 11;
-            this.rbFeminino.TabStop = true;
             this.rbFeminino.Text = "Feminino";
             this.rbFeminino.UseVisualStyleBackColor = true;
             this.rbFeminino.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
@@ -154,7 +153,6 @@
             this.rbPJ.Name = "rbPJ";
             this.rbPJ.Size = new System.Drawing.Size(37, 17);
             this.rbPJ.TabIndex = 13;
-            this.rbPJ.TabStop = true;
             this.rbPJ.Text = "PJ";
             this.rbPJ.UseVisualStyleBackColor = true;
             // 
@@ -165,7 +163,6 @@
             this.rbAutonomo.Name = "rbAutonomo";
             this.rbAutonomo.Size = new System.Drawing.Size(73, 17);
             this.rbAutonomo.TabIndex = 14;
-            this.rbAutonomo.TabStop = true;
             this.rbAutonomo.Text = "Autônomo";
             this.rbAutonomo.UseVisualStyleBackColor = true;
             // 
@@ -203,7 +200,7 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblErros);
             this.Controls.Add(this.lblSalario);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblNome);
@@ -224,7 +221,7 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblSalario;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblErros;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtEmail;
