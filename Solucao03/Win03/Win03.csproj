@@ -63,6 +63,12 @@
     <Compile Include="MDIPai.Designer.cs">
       <DependentUpon>MDIPai.cs</DependentUpon>
     </Compile>
+    <Compile Include="MeuMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeuMDI.Designer.cs">
+      <DependentUpon>MeuMDI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -73,6 +79,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MDIPai.resx">
       <DependentUpon>MDIPai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeuMDI.resx">
+      <DependentUpon>MeuMDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,6 +104,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Imagem\store-new-badges.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
