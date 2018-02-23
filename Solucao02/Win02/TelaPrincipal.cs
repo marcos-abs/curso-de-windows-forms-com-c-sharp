@@ -19,5 +19,10 @@ namespace Win02 {
         private void NovoAction(object sender, EventArgs e) {
             new CadastroFuncionario(this).Show();
         }
+
+        private void EditarAction(object sender, EventArgs e) {
+            int id = (int) dgvTabelaFuncionario.SelectedRows[0].Cells[0].Value;
+            new CadastroFuncionario(this).Show();
+        }
     }
 }

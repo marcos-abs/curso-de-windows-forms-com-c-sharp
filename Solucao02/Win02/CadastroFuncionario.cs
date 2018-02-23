@@ -15,10 +15,25 @@ namespace Win02 {
     public partial class CadastroFuncionario : Form {
 
         private TelaPrincipal telaPrincipal;
+        private int Id;
 
         public CadastroFuncionario(TelaPrincipal tela) {
             telaPrincipal = tela;
             InitializeComponent();
+        }
+
+        public CadastroFuncionario(TelaPrincipal tela, int Id) {
+            telaPrincipal = tela;
+            Id = id; // parei aqui
+            InitializeComponent();
+
+            FuncionarioParaTela(FuncionarioDataAccess.PegarFuncionario(id));
+        }
+
+        private void FuncionarioParaTela(Funcionario funcionario) {
+            txtNome.Text = funcionario.Nome;
+            txtEmail.Text = funcionario.Email;
+            txtSalario.Text = funcionario.Salario.ToString();
         }
 
         private void label6_Click(object sender, EventArgs e) {

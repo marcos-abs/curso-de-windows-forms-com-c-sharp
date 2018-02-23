@@ -36,7 +36,31 @@ namespace Win02.Banco {
                 con.Close();
                 return false;
             }
+        }
 
+        public static Funcionario PegarFuncionario(int id) {
+            string sql = "SELECT * FROM [Funcinoario] WHERE Id = @id";
+
+            SqlCeCommand comando = new SqlCeCommand(sql, con);
+            comando.Parameters.Add("@id", id);
+
+            con.Open();
+            SqlCeDataReader resposta = comando.ExecuteReader();
+            Funcionario funcionario = new Funcionario();
+            while (resposta.Read()) {
+                funcionario.Id = resposta.GetInt32(0);
+                funcionario.Nome = resposta.GetString(1);
+                funcionario.Email = resposta.GetString(2);
+                funcionario.Salario = resposta.GetDecimal(3);
+                funcionario.Sexo = resposta.GetString(4);
+                funcionario.TipoContrato = resposta.GetString(5);
+                funcionario.DataCadastro = resposta.GetDateTime(6);
+                funcionario.DataAtualizacao = resposta.GetDateTime(7);
+            }
+            con.Close();
+
+            return funcionario;
+            }
         }
     }
 }
