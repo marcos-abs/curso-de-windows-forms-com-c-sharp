@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Win02.Banco;
 
 namespace Win02 {
     public partial class TelaPrincipal : Form {
@@ -23,6 +24,14 @@ namespace Win02 {
         private void EditarAction(object sender, EventArgs e) {
             int id = (int) dgvTabelaFuncionario.SelectedRows[0].Cells[0].Value;
             new CadastroFuncionario(this, id).Show();
+        }
+
+        private void ExcluirAction(object sender, EventArgs e) {
+            int id = (int)dgvTabelaFuncionario.SelectedRows[0].Cells[0].Value;
+            FuncionarioDataAccess.ExcluirFuncionario(id);
+         
+            AtualizarTabela();
+
         }
     }
 }

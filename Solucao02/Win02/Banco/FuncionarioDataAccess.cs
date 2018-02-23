@@ -88,5 +88,18 @@ namespace Win02.Banco {
 
             return funcionario;
         }
+
+        public static Funcionario ExcluirFuncionario(int id) {
+            string sql = "DELETE * FROM [Funcionario] WHERE Id = @id";
+
+            SqlCeCommand comando = new SqlCeCommand(sql, con);
+            comando.Parameters.Add("@id", id);
+
+            con.Open();
+            comando.ExecuteNonQuery();
+            con.Close();
+
+            return funcionario;
+        }
     }
 }
