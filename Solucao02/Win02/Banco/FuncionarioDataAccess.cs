@@ -60,7 +60,6 @@ namespace Win02.Banco {
             con.Close();
 
             return funcionario;
-            }
         }
     }
 }

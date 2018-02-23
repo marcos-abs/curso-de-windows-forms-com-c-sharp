@@ -15,7 +15,7 @@ namespace Win02 {
     public partial class CadastroFuncionario : Form {
 
         private TelaPrincipal telaPrincipal;
-        private int Id;
+        private Funcionario func;
 
         public CadastroFuncionario(TelaPrincipal tela) {
             telaPrincipal = tela;
@@ -24,16 +24,28 @@ namespace Win02 {
 
         public CadastroFuncionario(TelaPrincipal tela, int Id) {
             telaPrincipal = tela;
-            Id = id; // parei aqui
             InitializeComponent();
 
-            FuncionarioParaTela(FuncionarioDataAccess.PegarFuncionario(id));
+            func = FuncionarioDataAccess.PegarFuncionario(Id);
+            FuncionarioParaTela(func);
         }
 
         private void FuncionarioParaTela(Funcionario funcionario) {
             txtNome.Text = funcionario.Nome;
             txtEmail.Text = funcionario.Email;
             txtSalario.Text = funcionario.Salario.ToString();
+            if (funcionario.Sexo == "M") {
+                rbMasculino.Checked = true;
+            } else {
+                rbFeminino.Checked = true;
+            }
+            if (funcionario.TipoContrato == "CLT") {
+                rbCLT.Checked = true;
+            } else if (funcionario.TipoContrato == "PJ") {
+                rbPJ.Checked = true;
+            } else {
+                rbAutonomo.Checked = true;
+            }
         }
 
         private void label6_Click(object sender, EventArgs e) {
