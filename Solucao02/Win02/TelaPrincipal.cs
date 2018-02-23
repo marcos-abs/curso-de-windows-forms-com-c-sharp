@@ -22,7 +22,7 @@ namespace Win02 {
 
         private void EditarAction(object sender, EventArgs e) {
             int id = (int) dgvTabelaFuncionario.SelectedRows[0].Cells[0].Value;
-            new CadastroFuncionario(this).Show();
+            new CadastroFuncionario(this, id).Show();
         }
     }
 }

@@ -38,8 +38,30 @@ namespace Win02.Banco {
             }
         }
 
+        public static bool AtualizarFuncionario(Funcionario funcionario) {
+            string sql = "UPDATE [Funcionario] SET Nome = @Nome, Email = @Email, Salario = @Salario, Sexo = @Sexo, TipoContrato = @TipoContrato, DataAtualizacao = @DataAtualizacao WHERE Id = @Id";
+            SqlCeCommand comando = new SqlCeCommand(sql, con);
+            comando.Parameters.Add("@Id", funcionario.Id);
+            comando.Parameters.Add("@Nome", funcionario.Nome);
+            comando.Parameters.Add("@Email", funcionario.Email);
+            comando.Parameters.Add("@Salario", funcionario.Salario);
+            comando.Parameters.Add("@Sexo", funcionario.Sexo);
+            comando.Parameters.Add("@TipoContrato", funcionario.TipoContrato);
+            comando.Parameters.Add("@DataAtualizacao", funcionario.DataAtualizacao);
+
+            con.Open();
+
+            if (comando.ExecuteNonQuery() > 0) {
+                con.Close();
+                return true;
+            } else {
+                con.Close();
+                return false;
+            }
+        }
+
         public static Funcionario PegarFuncionario(int id) {
-            string sql = "SELECT * FROM [Funcinoario] WHERE Id = @id";
+            string sql = "SELECT * FROM [Funcionario] WHERE Id = @id";
 
             SqlCeCommand comando = new SqlCeCommand(sql, con);
             comando.Parameters.Add("@id", id);
@@ -55,7 +77,12 @@ namespace Win02.Banco {
                 funcionario.Sexo = resposta.GetString(4);
                 funcionario.TipoContrato = resposta.GetString(5);
                 funcionario.DataCadastro = resposta.GetDateTime(6);
-                funcionario.DataAtualizacao = resposta.GetDateTime(7);
+                // if (resposta.IsDBNull(7)) {
+                //funcionario.DataAtualizacao = null;
+                //} else {
+                if (! resposta.IsDBNull(7)) { // pog
+                    funcionario.DataAtualizacao = resposta.GetDateTime(7);
+                }
             }
             con.Close();
 

@@ -31,8 +31,8 @@ namespace Win02 {
         }
 
         private void FuncionarioParaTela(Funcionario funcionario) {
-            txtNome.Text = funcionario.Nome;
-            txtEmail.Text = funcionario.Email;
+            txtNome.Text = funcionario.Nome.Trim();
+            txtEmail.Text = funcionario.Email.Trim();
             txtSalario.Text = funcionario.Salario.ToString();
             if (funcionario.Sexo == "M") {
                 rbMasculino.Checked = true;
@@ -61,14 +61,25 @@ namespace Win02 {
         }
 
         private void SalvarAction(object sender, EventArgs e) {
+            Funcionario funcionario;
+
+            // Atualiza ou Salva ?
+            if (func != null) {
+                // Atualização
+                funcionario = func;
+                funcionario.DataAtualizacao = DateTime.Now;
+            } else {
+                // Salva cadastro novo
+                funcionario = new Funcionario();
+                funcionario.DataCadastro = DateTime.Now;
+            }
+
             // Mover os dados da classe funcionario
-            Funcionario funcionario = new Funcionario();
-            funcionario.Nome = txtNome.Text;
-            funcionario.Email = txtEmail.Text;
+            funcionario.Nome = txtNome.Text.Trim();
+            funcionario.Email = txtEmail.Text.Trim();
             funcionario.Salario = decimal.Parse(txtSalario.Text);
             funcionario.Sexo = (rbMasculino.Checked) ? "M" : "F";
             funcionario.TipoContrato = (rbCLT.Checked) ? "CLT" : (rbPJ.Checked) ? "PJ":"AUT";
-            funcionario.DataCadastro = DateTime.Now;
 
             // validar os dados
             List<ValidationResult> listErros = new List<ValidationResult>();
@@ -80,7 +91,15 @@ namespace Win02 {
                 // salvar os dados
 
                 // fechar e atualizar a TelaPrincipal
-                if (FuncionarioDataAccess.SalvarFuncionario(funcionario)) {
+                bool resultado;
+                if (func != null) {
+                    // Atualizar
+                    resultado = FuncionarioDataAccess.AtualizarFuncionario(funcionario);
+                } else {
+                    // Salvar
+                    resultado = FuncionarioDataAccess.SalvarFuncionario(funcionario);
+                }
+                if (resultado) {
                     // sucesso.
                     telaPrincipal.AtualizarTabela();
                     this.Close();
