@@ -44,6 +44,11 @@ namespace Win02 {
             bool validado = Validator.TryValidateObject(funcionario, contexto, listErros, true);
             if (validado) {
                 // validacao ok.
+
+                // salvar os dados
+
+                // fechar e atualizar a TelaPrincipal
+
             } else {
                 //validacao erro.
                 StringBuilder sb = new StringBuilder();
@@ -52,11 +57,6 @@ namespace Win02 {
                 }
                 lblErros.Text = sb.ToString();
             }
-
-            // salvar os dados
-
-            // fechar e atualizar a TelaPrincipal
-
         }
     }
 }
