@@ -9,10 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Win02.Modelo;
 using System.ComponentModel.DataAnnotations;
+using Win02.Banco;
 
 namespace Win02 {
     public partial class CadastroFuncionario : Form {
-        public CadastroFuncionario() {
+
+        private TelaPrincipal telaPrincipal;
+
+        public CadastroFuncionario(TelaPrincipal tela) {
+            telaPrincipal = tela;
             InitializeComponent();
         }
 
@@ -48,7 +53,14 @@ namespace Win02 {
                 // salvar os dados
 
                 // fechar e atualizar a TelaPrincipal
-
+                if (FuncionarioDataAccess.SalvarFuncionario(funcionario)) {
+                    // sucesso.
+                    telaPrincipal.AtualizarTabela();
+                    this.Close();
+                } else {
+                    // falha.
+                    lblErros.Text = "Erro na inserção - Banco";
+                }
             } else {
                 //validacao erro.
                 StringBuilder sb = new StringBuilder();

@@ -5,6 +5,10 @@ namespace Win02 {
     public partial class TelaPrincipal : Form {
         public TelaPrincipal() {
             InitializeComponent();
+            AtualizarTabela();
+        }
+
+        public void AtualizarTabela() {
             dgvTabelaFuncionario.DataSource = Banco.FuncionarioDataAccess.pegarFuncionario();
         }
 
@@ -13,7 +17,7 @@ namespace Win02 {
         }
 
         private void NovoAction(object sender, EventArgs e) {
-            new CadastroFuncionario().Show();
+            new CadastroFuncionario(this).Show();
         }
     }
 }
