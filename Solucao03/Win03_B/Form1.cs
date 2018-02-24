@@ -18,11 +18,23 @@ namespace Win03_B {
                     lblTipoContrato.Text = ((RadioButton)sender).Text;
                 };
             }
-            //gbLinguagem.Controls
+
+            foreach (CheckBox check in gbLinguagem.Controls) {
+                check.CheckedChanged += delegate (object sender, EventArgs args) {
+                    Verificar();
+                };
+            }
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e) {
+        private void Verificar() {
+            StringBuilder sb = new StringBuilder();
 
+            foreach(CheckBox check in gbLinguagem.Controls) {
+                if (check.Checked == true) {
+                    sb.Append(check.Text + " - ");
+                }
+            }
+            lblLinguagens.Text = sb.ToString();
         }
     }
 }
