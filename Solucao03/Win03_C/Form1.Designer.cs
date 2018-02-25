@@ -37,7 +37,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(24, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(265, 72);
             this.panel1.TabIndex = 0;
@@ -69,7 +69,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(187, 405);
+            this.panel2.Size = new System.Drawing.Size(317, 405);
             this.panel2.TabIndex = 1;
             // 
             // Form1
