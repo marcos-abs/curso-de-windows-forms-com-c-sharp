@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win07", "Win07\Win07.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win08", "Win08\Win08.csproj", "{E8979D5B-B11A-4066-BE74-4EDA2BA8D4C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win09", "Win09\Win09.csproj", "{8DC0EB28-6555-4ED3-88AC-4330EA6C24BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{E8979D5B-B11A-4066-BE74-4EDA2BA8D4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8979D5B-B11A-4066-BE74-4EDA2BA8D4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8979D5B-B11A-4066-BE74-4EDA2BA8D4C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DC0EB28-6555-4ED3-88AC-4330EA6C24BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DC0EB28-6555-4ED3-88AC-4330EA6C24BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DC0EB28-6555-4ED3-88AC-4330EA6C24BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DC0EB28-6555-4ED3-88AC-4330EA6C24BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
