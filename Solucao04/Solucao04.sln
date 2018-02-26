@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win04", "Win04\Win04.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win05", "Win05\Win05.csproj", "{5C19B954-AE70-42A8-94F7-88B8D4805DA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win07", "Win07\Win07.csproj", "{C5F99E0C-A395-4862-AF77-31558A4C1A82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5C19B954-AE70-42A8-94F7-88B8D4805DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C19B954-AE70-42A8-94F7-88B8D4805DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C19B954-AE70-42A8-94F7-88B8D4805DA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F99E0C-A395-4862-AF77-31558A4C1A82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F99E0C-A395-4862-AF77-31558A4C1A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F99E0C-A395-4862-AF77-31558A4C1A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F99E0C-A395-4862-AF77-31558A4C1A82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
