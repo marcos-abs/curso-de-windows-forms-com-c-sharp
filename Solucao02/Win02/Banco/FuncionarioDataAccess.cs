@@ -77,10 +77,9 @@ namespace Win02.Banco {
                 funcionario.Sexo = resposta.GetString(4);
                 funcionario.TipoContrato = resposta.GetString(5);
                 funcionario.DataCadastro = resposta.GetDateTime(6);
-                // if (resposta.IsDBNull(7)) {
-                //funcionario.DataAtualizacao = null;
-                //} else {
-                if (! resposta.IsDBNull(7)) { // pog
+                if (resposta.IsDBNull(7)) {
+                    funcionario.DataAtualizacao = null;
+                } else if (! resposta.IsDBNull(7)) { // pog
                     funcionario.DataAtualizacao = resposta.GetDateTime(7);
                 }
             }
@@ -92,11 +91,12 @@ namespace Win02.Banco {
         public static Funcionario ExcluirFuncionario(int id) {
             string sql = "DELETE * FROM [Funcionario] WHERE Id = @id";
 
+            Funcionario funcionario = new Funcionario();
             SqlCeCommand comando = new SqlCeCommand(sql, con);
             comando.Parameters.Add("@id", id);
 
             con.Open();
-            comando.ExecuteNonQuery();
+            comando.ExecuteNonQuery(); //erro ao executar
             con.Close();
 
             return funcionario;

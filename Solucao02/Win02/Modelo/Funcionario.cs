@@ -22,7 +22,7 @@ namespace Win02.Modelo {
         public string TipoContrato { get; set; }
 
         public DateTime DataCadastro { get; set; }
-        public DateTime DataAtualizacao { get; set; }
+        public Nullable<DateTime> DataAtualizacao { get; set; } //pog
 
     }
 }
