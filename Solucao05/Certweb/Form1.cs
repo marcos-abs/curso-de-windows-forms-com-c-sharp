@@ -13,5 +13,9 @@ namespace Certweb {
         public Form1() {
             InitializeComponent();
         }
+
+        private void btnFechar_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
     }
 }

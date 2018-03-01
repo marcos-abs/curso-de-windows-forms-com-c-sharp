@@ -31,6 +31,7 @@
             this.btnTarefas = new System.Windows.Forms.Button();
             this.btnLinks = new System.Windows.Forms.Button();
             this.btnSobre = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +56,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 15);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(270, 741);
+            this.panel2.Size = new System.Drawing.Size(270, 605);
             this.panel2.TabIndex = 1;
             // 
             // btnPainel
@@ -67,7 +68,7 @@
             this.btnPainel.ForeColor = System.Drawing.Color.White;
             this.btnPainel.Image = ((System.Drawing.Image)(resources.GetObject("btnPainel.Image")));
             this.btnPainel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPainel.Location = new System.Drawing.Point(46, 286);
+            this.btnPainel.Location = new System.Drawing.Point(46, 247);
             this.btnPainel.Name = "btnPainel";
             this.btnPainel.Size = new System.Drawing.Size(183, 70);
             this.btnPainel.TabIndex = 1;
@@ -93,7 +94,7 @@
             this.btnTarefas.ForeColor = System.Drawing.Color.White;
             this.btnTarefas.Image = ((System.Drawing.Image)(resources.GetObject("btnTarefas.Image")));
             this.btnTarefas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTarefas.Location = new System.Drawing.Point(46, 391);
+            this.btnTarefas.Location = new System.Drawing.Point(46, 331);
             this.btnTarefas.Name = "btnTarefas";
             this.btnTarefas.Size = new System.Drawing.Size(183, 70);
             this.btnTarefas.TabIndex = 2;
@@ -109,7 +110,7 @@
             this.btnLinks.ForeColor = System.Drawing.Color.White;
             this.btnLinks.Image = ((System.Drawing.Image)(resources.GetObject("btnLinks.Image")));
             this.btnLinks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLinks.Location = new System.Drawing.Point(46, 496);
+            this.btnLinks.Location = new System.Drawing.Point(46, 415);
             this.btnLinks.Name = "btnLinks";
             this.btnLinks.Size = new System.Drawing.Size(183, 70);
             this.btnLinks.TabIndex = 3;
@@ -125,19 +126,33 @@
             this.btnSobre.ForeColor = System.Drawing.Color.White;
             this.btnSobre.Image = ((System.Drawing.Image)(resources.GetObject("btnSobre.Image")));
             this.btnSobre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSobre.Location = new System.Drawing.Point(46, 601);
+            this.btnSobre.Location = new System.Drawing.Point(46, 499);
             this.btnSobre.Name = "btnSobre";
             this.btnSobre.Size = new System.Drawing.Size(183, 70);
             this.btnSobre.TabIndex = 4;
             this.btnSobre.Text = "      Sobre";
             this.btnSobre.UseVisualStyleBackColor = false;
             // 
+            // btnFechar
+            // 
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechar.Location = new System.Drawing.Point(757, 21);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(31, 38);
+            this.btnFechar.TabIndex = 2;
+            this.btnFechar.Text = "X";
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 756);
+            this.ClientSize = new System.Drawing.Size(800, 620);
+            this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -158,6 +173,7 @@
         private System.Windows.Forms.Button btnSobre;
         private System.Windows.Forms.Button btnLinks;
         private System.Windows.Forms.Button btnTarefas;
+        private System.Windows.Forms.Button btnFechar;
     }
 }
 
