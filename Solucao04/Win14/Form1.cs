@@ -19,7 +19,12 @@ namespace Win14 {
         }
 
         private void webBrowser_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e) {
-            progressBar.Value = (int)e.CurrentProgress; // Erro valor superior 100 (150)
+            //progressBar.Value = (int)e.CurrentProgress; // Erro valor superior 100 (150)
+            if (e.CurrentProgress <= 0 || e.MaximumProgress <= 0) {
+                progressBar.Value = 0;
+            } else {
+                progressBar.Value = (Convert.ToInt32(e.CurrentProgress) / Convert.ToInt32(e.MaximumProgress)) * 100;
+            }
         }
     }
 }

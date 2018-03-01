@@ -55,7 +55,7 @@
             // 
             // btnAcessar
             // 
-            this.btnAcessar.Location = new System.Drawing.Point(708, 9);
+            this.btnAcessar.Location = new System.Drawing.Point(708, 13);
             this.btnAcessar.Name = "btnAcessar";
             this.btnAcessar.Size = new System.Drawing.Size(75, 23);
             this.btnAcessar.TabIndex = 3;
