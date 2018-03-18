@@ -29,10 +29,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +50,7 @@
             this.btnSalvar.TabIndex = 0;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtLink
             // 
@@ -99,14 +100,15 @@
             this.panel1.Size = new System.Drawing.Size(672, 26);
             this.panel1.TabIndex = 0;
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Curso de Windows Forms";
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(134, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(184, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "http://www.executa.com.br/winforms";
             // 
             // linkLabel1
             // 
@@ -134,15 +136,14 @@
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Excluir";
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(134, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "http://www.executa.com.br/winforms";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Curso de Windows Forms";
             // 
             // Links
             // 

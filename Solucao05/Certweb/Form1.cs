@@ -7,56 +7,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Certweb.Armazenamento.Arquivo;
 
 namespace Certweb {
     public partial class Form1 : Form {
         public Form1() {
+            GerenciadorLinks.LerLinks();
             InitializeComponent();
-
-            pnPainel.Visible = true;
-            pnLinks.Visible = false;
-            pnSobre.Visible = false;
-            pnTarefas.Visible = false;
+            PainelVisivel(pnPainel);
         }
 
         private void btnFechar_Click(object sender, EventArgs e) {
+            GerenciadorLinks.SalvarLinks();
             Application.Exit();
         }
 
         private void btnTarefas_Click(object sender, EventArgs e) {
             MoverIndicador((Button)sender);
-            pnPainel.Visible = false;
-            pnLinks.Visible = false;
-            pnSobre.Visible = false;
-            pnTarefas.Visible = true;
+            PainelVisivel(pnTarefas);
         }
 
         private void btnLinks_Click(object sender, EventArgs e) {
             MoverIndicador((Button)sender);
-            pnPainel.Visible = false;
-            pnLinks.Visible = true;
-            pnSobre.Visible = false;
-            pnTarefas.Visible = false;
+            PainelVisivel(pnLinks);
         }
 
         private void btnSobre_Click(object sender, EventArgs e) {
             MoverIndicador((Button)sender);
-            pnPainel.Visible = false;
-            pnLinks.Visible = false;
-            pnSobre.Visible = true;
-            pnTarefas.Visible = false;
+            PainelVisivel(pnSobre);
         }
 
         private void btnPainel_Click(object sender, EventArgs e) {
             MoverIndicador((Button)sender);
-            pnPainel.Visible = true;
-            pnLinks.Visible = false;
-            pnSobre.Visible = false;
-            pnTarefas.Visible = false;
+            PainelVisivel(pnPainel);
         }
 
         private void MoverIndicador(Button btnMenu) {
             pnIndicador.Location = new Point(pnIndicador.Location.X, btnMenu.Location.Y);
+        }
+
+        // Refatorado
+        private void PainelVisivel(UserControl pn) {
+
+            pnPainel.Visible = false;
+            pnLinks.Visible = false;
+            pnSobre.Visible = false;
+            pnTarefas.Visible = false;
+
+            pn.Visible = true;
         }
     }
 }
