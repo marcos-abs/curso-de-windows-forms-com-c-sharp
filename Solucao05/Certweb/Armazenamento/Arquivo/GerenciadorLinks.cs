@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Certweb.Armazenamento.Modelo;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace Certweb.Armazenamento.Arquivo {
     public class GerenciadorLinks {
@@ -18,6 +19,11 @@ namespace Certweb.Armazenamento.Arquivo {
             ListaLinks.Remove(link);
         }
         public static List<Link> LerLinks() {
+
+            if (! File.Exists(NomeArquivo)) { //pog
+                ListaLinks = new List<Link>();
+            }
+
             if ( ListaLinks == null ) {
                 string conteudoArquivo = new GerenciadorArquivos().Ler(NomeArquivo);
                 ListaLinks = JsonConvert.DeserializeObject<List<Link>>(conteudoArquivo); 
