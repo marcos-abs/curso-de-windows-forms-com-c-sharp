@@ -14,9 +14,12 @@ namespace Certweb {
     public partial class Links : UserControl {
 
         private Link LinkEmEdicao { get; set; }
+        private Tarefas _tarefa;
 
-        public Links() {
+        public Links(Tarefas tarefas) {
             InitializeComponent();
+
+            _tarefa = tarefas;
             CarregarLinks();
         }
 
@@ -35,6 +38,7 @@ namespace Certweb {
         }
 
         private void CarregarLinks() {
+            _tarefa.CarregarLinks();
             pnFlowLinks.Controls.Clear();
             List<Link> lista = GerenciadorLinks.LerLinks();
 
