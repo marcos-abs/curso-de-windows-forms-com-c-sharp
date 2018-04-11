@@ -50,6 +50,11 @@
   <ItemGroup>
     <Compile Include="Armazenamento\Arquivo\GerenciadorArquivos.cs" />
     <Compile Include="Armazenamento\Arquivo\GerenciadorLinks.cs" />
+    <Compile Include="Armazenamento\Arquivo\Texto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Texto.resx</DependentUpon>
+    </Compile>
     <Compile Include="Armazenamento\Modelo\Link.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -83,6 +88,10 @@
     <Compile Include="Tarefas.Designer.cs">
       <DependentUpon>Tarefas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Armazenamento\Arquivo\Texto.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Texto.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
