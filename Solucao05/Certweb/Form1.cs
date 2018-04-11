@@ -56,5 +56,26 @@ namespace Certweb {
 
             pn.Visible = true;
         }
+
+        private bool BotaoMousePressionado = false;
+        private Point PontoInicialFormulario;
+        private Point PontoInicialCursor;
+
+        private void pnDragDrop_MouseDown(object sender, MouseEventArgs e) {
+            BotaoMousePressionado = true;
+            PontoInicialFormulario = this.Location;
+            PontoInicialCursor = Cursor.Position;
+        }
+
+        private void pnDragDrop_MouseUp(object sender, MouseEventArgs e) {
+            BotaoMousePressionado = false;
+        }
+
+        private void pnDragDrop_MouseMove(object sender, MouseEventArgs e) {
+            if(BotaoMousePressionado == true) {
+                Point dif = Point.Subtract(Cursor.Position, new Size(PontoInicialCursor));
+                this.Location = Point.Add(PontoInicialFormulario, new Size(dif));
+            }
+        }
     }
 }

@@ -24,15 +24,15 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnDragDrop = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSobre = new System.Windows.Forms.Button();
             this.btnLinks = new System.Windows.Forms.Button();
             this.btnTarefas = new System.Windows.Forms.Button();
             this.btnPainel = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnFechar = new System.Windows.Forms.Button();
             this.pnIndicador = new System.Windows.Forms.Panel();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.pnTarefas = new Certweb.Tarefas();
             this.pnSobre = new Certweb.Sobre();
             this.pnPainel = new Certweb.Painel();
@@ -41,14 +41,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnDragDrop
             // 
-            this.panel1.BackColor = System.Drawing.Color.Purple;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1036, 15);
-            this.panel1.TabIndex = 0;
+            this.pnDragDrop.BackColor = System.Drawing.Color.Purple;
+            this.pnDragDrop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnDragDrop.Location = new System.Drawing.Point(0, 0);
+            this.pnDragDrop.Name = "pnDragDrop";
+            this.pnDragDrop.Size = new System.Drawing.Size(1036, 15);
+            this.pnDragDrop.TabIndex = 0;
+            this.pnDragDrop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnDragDrop_MouseDown);
+            this.pnDragDrop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnDragDrop_MouseMove);
+            this.pnDragDrop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnDragDrop_MouseUp);
             // 
             // panel2
             // 
@@ -143,6 +146,14 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // pnIndicador
+            // 
+            this.pnIndicador.BackColor = System.Drawing.Color.Purple;
+            this.pnIndicador.Location = new System.Drawing.Point(18, 247);
+            this.pnIndicador.Name = "pnIndicador";
+            this.pnIndicador.Size = new System.Drawing.Size(10, 70);
+            this.pnIndicador.TabIndex = 7;
+            // 
             // btnFechar
             // 
             this.btnFechar.FlatAppearance.BorderSize = 0;
@@ -155,14 +166,6 @@
             this.btnFechar.Text = "X";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            // 
-            // pnIndicador
-            // 
-            this.pnIndicador.BackColor = System.Drawing.Color.Purple;
-            this.pnIndicador.Location = new System.Drawing.Point(18, 247);
-            this.pnIndicador.Name = "pnIndicador";
-            this.pnIndicador.Size = new System.Drawing.Size(10, 70);
-            this.pnIndicador.TabIndex = 7;
             // 
             // pnTarefas
             // 
@@ -202,7 +205,7 @@
             this.Controls.Add(this.pnTarefas);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnDragDrop);
             this.Controls.Add(this.pnSobre);
             this.Controls.Add(this.pnPainel);
             this.Controls.Add(this.pnLinks);
@@ -217,7 +220,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnDragDrop;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnPainel;

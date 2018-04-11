@@ -38,35 +38,33 @@ namespace Certweb {
             pnFlowLinks.Controls.Clear();
             List<Link> lista = GerenciadorLinks.LerLinks();
 
-            foreach (var link in lista) {
-                var pn = new FlowLayoutPanel();
-                pn.FlowDirection = FlowDirection.LeftToRight;
-                pn.Size = new Size(680, 400);
-                pn.AutoSize = true;
+            if(lista != null) {
+                foreach (var link in lista) {
+                    var pn = new FlowLayoutPanel();
+                    pn.FlowDirection = FlowDirection.LeftToRight;
+                    pn.Size = new Size(680, 400);
+                    pn.AutoSize = true;
 
-                var descricao = new Label() { Text = link.Descricao, Font = new Font(Texto.FONT, 8), ForeColor = Color.FromArgb(68, 68, 68) };
-                //
-                var endereco = new Label() { Text = link.Endereco, Font = new Font(Texto.FONT, 8), ForeColor = Color.FromArgb(134, 134, 134) };
-                //
-                var btnEditar = new LinkLabel() { Text = "Editar", Font = new Font(Texto.FONT, 8) };
-                //
-                var btnExcluir = new LinkLabel() { Text = "Excluir", Font = new Font(Texto.FONT, 8) };
-                // 
+                    var descricao = new Label() { Text = link.Descricao, Font = new Font(Texto.FONT, 8), ForeColor = Color.FromArgb(68, 68, 68) };
+                    var endereco = new Label() { Text = link.Endereco, Font = new Font(Texto.FONT, 8), ForeColor = Color.FromArgb(134, 134, 134) };
+                    var btnEditar = new LinkLabel() { Text = "Editar", Font = new Font(Texto.FONT, 8) };
+                    var btnExcluir = new LinkLabel() { Text = "Excluir", Font = new Font(Texto.FONT, 8) };
 
-                pn.Controls.Add(descricao);
-                pn.Controls.Add(endereco);
-                pn.Controls.Add(btnEditar);
-                pn.Controls.Add(btnExcluir);
+                    pn.Controls.Add(descricao);
+                    pn.Controls.Add(endereco);
+                    pn.Controls.Add(btnEditar);
+                    pn.Controls.Add(btnExcluir);
 
-                pnFlowLinks.Controls.Add(pn);
+                    pnFlowLinks.Controls.Add(pn);
 
-                btnEditar.Click += delegate {
-                    EditarAction(link);
-                };
+                    btnEditar.Click += delegate {
+                        EditarAction(link);
+                    };
 
-                btnExcluir.Click += delegate {
-                    ExcluirAction(link);
-                };
+                    btnExcluir.Click += delegate {
+                        ExcluirAction(link);
+                    };
+                }
             }
         }
 

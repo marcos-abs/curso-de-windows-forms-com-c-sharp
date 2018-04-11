@@ -20,16 +20,16 @@ namespace Certweb.Armazenamento.Arquivo {
         }
         public static List<Link> LerLinks() {
 
-            if (! File.Exists(NomeArquivo)) { //pog
+            if(!File.Exists(NomeArquivo)) { //pog
                 ListaLinks = new List<Link>();
             }
 
-            if ( ListaLinks == null ) {
+            if(ListaLinks == null) {
                 string conteudoArquivo = new GerenciadorArquivos().Ler(NomeArquivo);
-                ListaLinks = JsonConvert.DeserializeObject<List<Link>>(conteudoArquivo); 
-            } else {
-                return ListaLinks;
-            }
+                if(conteudoArquivo != null) {
+                    ListaLinks = JsonConvert.DeserializeObject<List<Link>>(conteudoArquivo);
+                } 
+            } 
             return ListaLinks;
         }
         public static void SalvarLinks() {
