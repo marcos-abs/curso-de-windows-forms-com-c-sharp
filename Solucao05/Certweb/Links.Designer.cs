@@ -40,7 +40,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(596, 66);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(110, 43);
-            this.btnSalvar.TabIndex = 0;
+            this.btnSalvar.TabIndex = 2;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -48,20 +48,26 @@
             // txtLink
             // 
             this.txtLink.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLink.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.txtLink.Location = new System.Drawing.Point(321, 22);
             this.txtLink.Name = "txtLink";
             this.txtLink.Size = new System.Drawing.Size(385, 40);
             this.txtLink.TabIndex = 1;
             this.txtLink.Text = "URL do site";
+            this.txtLink.Enter += new System.EventHandler(this.txtLink_Enter);
+            this.txtLink.Leave += new System.EventHandler(this.txtLink_Leave);
             // 
             // txtDescricao
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.txtDescricao.Location = new System.Drawing.Point(24, 22);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(263, 40);
-            this.txtDescricao.TabIndex = 2;
+            this.txtDescricao.TabIndex = 0;
             this.txtDescricao.Text = "Descrição";
+            this.txtDescricao.Enter += new System.EventHandler(this.txtDescricao_Enter);
+            this.txtDescricao.Leave += new System.EventHandler(this.txtDescricao_Leave);
             // 
             // label1
             // 
@@ -80,7 +86,7 @@
             this.pnFlowLinks.Location = new System.Drawing.Point(24, 115);
             this.pnFlowLinks.Name = "pnFlowLinks";
             this.pnFlowLinks.Size = new System.Drawing.Size(680, 300);
-            this.pnFlowLinks.TabIndex = 4;
+            this.pnFlowLinks.TabIndex = 3;
             this.pnFlowLinks.WrapContents = false;
             // 
             // Links
