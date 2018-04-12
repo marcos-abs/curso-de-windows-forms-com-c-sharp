@@ -18,11 +18,12 @@ namespace Certweb {
 
         private Painel _painel;
 
-        public Tarefas(Painel painel) {
+        public Tarefas() {
             InitializeComponent();
+        }
 
+        public void SetPanels(Painel painel) {
             _painel = painel;
-
             CarregarLinks();
         }
 

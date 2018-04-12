@@ -34,8 +34,10 @@
             this.pnIndicador = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.Button();
             this.pnPainel = new Certweb.Painel();
-            this.pnTarefas = new Certweb.Tarefas(this.pnPainel);
-            this.pnLinks = new Certweb.Links(this.pnTarefas, this.pnPainel);
+            //this.pnTarefas = new Certweb.Tarefas(this.pnPainel);
+            this.pnTarefas = new Certweb.Tarefas();
+            //this.pnLinks = new Certweb.Links(this.pnTarefas, this.pnPainel);
+            this.pnLinks = new Certweb.Links();
             this.pnSobre = new Certweb.Sobre();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();

@@ -14,6 +14,10 @@ namespace Certweb {
         public Form1() {
             GerenciadorLinks.LerLinks();
             InitializeComponent();
+
+            pnTarefas.SetPanels(pnPainel);
+            pnLinks.SetPainels(pnTarefas, pnPainel);
+
             PainelVisivel(pnPainel);
         }
 
