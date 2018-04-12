@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Armazenamento\Arquivo\GerenciadorArquivos.cs" />
     <Compile Include="Armazenamento\Arquivo\GerenciadorLinks.cs" />
+    <Compile Include="Armazenamento\Arquivo\GerenciadorTelaPainel.cs" />
     <Compile Include="Armazenamento\Arquivo\Texto.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

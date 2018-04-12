@@ -47,12 +47,16 @@ namespace Certweb {
             }
         }
 
-        private void button1_Click(object sender, EventArgs e) {
+        private void btnExecutar_Click(object sender, EventArgs e) {
+            new System.Threading.Thread(Executar).Start();
+        }
+
+        private void Executar() {
             Stopwatch sw = new Stopwatch();
 
             sw.Start();
             List<Link> lista = GerenciadorLinks.LerLinks();
-            foreach(var link in lista) {
+            foreach (var link in lista) {
                 GerenciadorDeAcesso.AcessarLink(link.Endereco);
             }
             sw.Stop();
@@ -61,9 +65,11 @@ namespace Certweb {
 
             Painel.Modelo.TempoDecorrido = sw.Elapsed;
             Painel.Modelo.UltimaExecucao = DateTime.Now;
-
-            _painel.AtualizarTextoTela();
-
+            if(_painel.InvokeRequired) {
+                Invoke(new Action(() => {
+                    _painel.AtualizarTextoTela();
+                }));
+            }
             MessageBox.Show("Sucesso!");
         }
     }

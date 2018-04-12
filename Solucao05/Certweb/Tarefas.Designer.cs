@@ -26,7 +26,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tarefas));
             this.pnFlowLinks = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExecutar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // pnFlowLinks
@@ -48,24 +48,24 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Links";
             // 
-            // button1
+            // btnExecutar
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(515, 154);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 185);
-            this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnExecutar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExecutar.BackgroundImage")));
+            this.btnExecutar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExecutar.FlatAppearance.BorderSize = 0;
+            this.btnExecutar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExecutar.Location = new System.Drawing.Point(515, 154);
+            this.btnExecutar.Name = "btnExecutar";
+            this.btnExecutar.Size = new System.Drawing.Size(194, 185);
+            this.btnExecutar.TabIndex = 7;
+            this.btnExecutar.UseVisualStyleBackColor = true;
+            this.btnExecutar.Click += new System.EventHandler(this.btnExecutar_Click);
             // 
             // Tarefas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExecutar);
             this.Controls.Add(this.pnFlowLinks);
             this.Controls.Add(this.label1);
             this.Name = "Tarefas";
@@ -78,6 +78,6 @@
         #endregion
         private System.Windows.Forms.FlowLayoutPanel pnFlowLinks;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExecutar;
     }
 }

@@ -16,8 +16,13 @@ namespace Certweb {
 
         public Painel() {
             InitializeComponent();
-            Modelo = new PainelModel();
-            Modelo.QuantidadeErros = 0;
+            Modelo = GerenciadorTelaPainel.LerDados();
+            if(Modelo == null) {
+                Modelo = new PainelModel();
+                Modelo.QuantidadeErros = 0;
+            }
+
+            AtualizarTextoTela();
         }
 
         public void QuantidadeLinks() {
