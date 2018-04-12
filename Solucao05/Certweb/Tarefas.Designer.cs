@@ -27,6 +27,7 @@
             this.pnFlowLinks = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExecutar = new System.Windows.Forms.Button();
+            this.pnProgressBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // pnFlowLinks
@@ -54,17 +55,25 @@
             this.btnExecutar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnExecutar.FlatAppearance.BorderSize = 0;
             this.btnExecutar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExecutar.Location = new System.Drawing.Point(515, 154);
+            this.btnExecutar.Location = new System.Drawing.Point(509, 93);
             this.btnExecutar.Name = "btnExecutar";
             this.btnExecutar.Size = new System.Drawing.Size(194, 185);
             this.btnExecutar.TabIndex = 7;
             this.btnExecutar.UseVisualStyleBackColor = true;
             this.btnExecutar.Click += new System.EventHandler(this.btnExecutar_Click);
             // 
+            // pnProgressBar
+            // 
+            this.pnProgressBar.Location = new System.Drawing.Point(509, 297);
+            this.pnProgressBar.Name = "pnProgressBar";
+            this.pnProgressBar.Size = new System.Drawing.Size(194, 23);
+            this.pnProgressBar.TabIndex = 8;
+            // 
             // Tarefas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pnProgressBar);
             this.Controls.Add(this.btnExecutar);
             this.Controls.Add(this.pnFlowLinks);
             this.Controls.Add(this.label1);
@@ -79,5 +88,6 @@
         private System.Windows.Forms.FlowLayoutPanel pnFlowLinks;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExecutar;
+        private System.Windows.Forms.ProgressBar pnProgressBar;
     }
 }

@@ -11,6 +11,7 @@ using Certweb.Armazenamento.Arquivo;
 using Certweb.Armazenamento.Modelo;
 using Certweb.Internet;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Certweb {
     public partial class Tarefas : UserControl {
@@ -48,7 +49,9 @@ namespace Certweb {
         }
 
         private void btnExecutar_Click(object sender, EventArgs e) {
-            new System.Threading.Thread(Executar).Start();
+            Thread th = new Thread(Executar);
+            th.IsBackground = true;
+            th.Start();
         }
 
         private void Executar() {
@@ -56,8 +59,20 @@ namespace Certweb {
 
             sw.Start();
             List<Link> lista = GerenciadorLinks.LerLinks();
+
+            double TotalLinks = lista.Count;
+            double LinkProcessamentoAtual = 0;
+            Painel.Modelo.QuantidadeErros = 0;
+
             foreach (var link in lista) {
                 GerenciadorDeAcesso.AcessarLink(link.Endereco);
+                LinkProcessamentoAtual++;
+                double Porcentagem = LinkProcessamentoAtual / TotalLinks * 100;
+                if (this.InvokeRequired) {
+                    Invoke(new Action(() => {
+                        pnProgressBar.Value = Convert.ToInt32(Porcentagem);
+                    }));
+                }
             }
             sw.Stop();
 
