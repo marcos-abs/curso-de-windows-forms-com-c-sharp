@@ -27,7 +27,9 @@ namespace Certweb {
 
         public void QuantidadeLinks() {
             List<Link> lista = GerenciadorLinks.LerLinks();
-            lblQuantidade.Text = lista.Count.ToString();
+            if(lista != null) {
+                lblQuantidade.Text = lista.Count.ToString();
+            }
         }
 
         public void AtualizarTextoTela() {

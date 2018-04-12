@@ -35,6 +35,7 @@ namespace Certweb {
             } else {
                 LinkEmEdicao.Descricao = txtDescricao.Text;
                 LinkEmEdicao.Endereco = txtLink.Text;
+                LinkEmEdicao = null; // limpando a referencia do objeto.
             }
 
             txtDescricao.Text = Texto.TXT_DESCRICAO;
