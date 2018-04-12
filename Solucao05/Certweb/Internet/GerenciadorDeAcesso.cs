@@ -9,8 +9,13 @@ using System.Net;
 namespace Certweb.Internet {
     public class GerenciadorDeAcesso {
         public static string AcessarLink(string link) {
-            WebClient client = new WebClient();
-            return client.DownloadString(link);
+            try {
+                WebClient client = new WebClient();
+                return client.DownloadString(link);
+            } catch (Exception e) {
+                Painel.Modelo.QuantidadeErros++;
+                return null;
+            }
         }
     }
 }

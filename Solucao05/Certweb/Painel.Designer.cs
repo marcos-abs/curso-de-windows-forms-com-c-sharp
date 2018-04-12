@@ -28,7 +28,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblTempoMedio = new System.Windows.Forms.Label();
+            this.lblTempoDecorrido = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblUltimaExecucao = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@
             this.lblQuantidade.Name = "lblQuantidade";
             this.lblQuantidade.Size = new System.Drawing.Size(51, 59);
             this.lblQuantidade.TabIndex = 0;
-            this.lblQuantidade.Text = "9";
+            this.lblQuantidade.Text = "0";
             // 
             // label2
             // 
@@ -74,32 +74,32 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
-            this.label4.Location = new System.Drawing.Point(63, 266);
+            this.label4.Location = new System.Drawing.Point(71, 266);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 19);
+            this.label4.Size = new System.Drawing.Size(50, 19);
             this.label4.TabIndex = 5;
-            this.label4.Text = "execução";
+            this.label4.Text = "tarefa";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.label5.Location = new System.Drawing.Point(31, 240);
+            this.label5.Location = new System.Drawing.Point(13, 240);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 26);
+            this.label5.Size = new System.Drawing.Size(166, 26);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Tempo médio";
+            this.label5.Text = "Tempo decorrido";
             // 
-            // lblTempoMedio
+            // lblTempoDecorrido
             // 
-            this.lblTempoMedio.AutoSize = true;
-            this.lblTempoMedio.Font = new System.Drawing.Font("Candara", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTempoMedio.Location = new System.Drawing.Point(43, 181);
-            this.lblTempoMedio.Name = "lblTempoMedio";
-            this.lblTempoMedio.Size = new System.Drawing.Size(113, 59);
-            this.lblTempoMedio.TabIndex = 3;
-            this.lblTempoMedio.Text = "30m";
+            this.lblTempoDecorrido.AutoSize = true;
+            this.lblTempoDecorrido.Font = new System.Drawing.Font("Candara", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTempoDecorrido.Location = new System.Drawing.Point(71, 181);
+            this.lblTempoDecorrido.Name = "lblTempoDecorrido";
+            this.lblTempoDecorrido.Size = new System.Drawing.Size(90, 59);
+            this.lblTempoDecorrido.TabIndex = 3;
+            this.lblTempoDecorrido.Text = "0m";
             // 
             // label7
             // 
@@ -129,9 +129,9 @@
             this.lblUltimaExecucao.Font = new System.Drawing.Font("Candara", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUltimaExecucao.Location = new System.Drawing.Point(404, 181);
             this.lblUltimaExecucao.Name = "lblUltimaExecucao";
-            this.lblUltimaExecucao.Size = new System.Drawing.Size(125, 59);
+            this.lblUltimaExecucao.Size = new System.Drawing.Size(141, 59);
             this.lblUltimaExecucao.TabIndex = 6;
-            this.lblUltimaExecucao.Text = "15:35";
+            this.lblUltimaExecucao.Text = "00:00";
             // 
             // label10
             // 
@@ -164,7 +164,7 @@
             this.lblErrosOcorridos.Name = "lblErrosOcorridos";
             this.lblErrosOcorridos.Size = new System.Drawing.Size(51, 59);
             this.lblErrosOcorridos.TabIndex = 9;
-            this.lblErrosOcorridos.Text = "9";
+            this.lblErrosOcorridos.Text = "0";
             // 
             // Painel
             // 
@@ -178,7 +178,7 @@
             this.Controls.Add(this.lblUltimaExecucao);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblTempoMedio);
+            this.Controls.Add(this.lblTempoDecorrido);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblQuantidade);
@@ -196,7 +196,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblTempoMedio;
+        private System.Windows.Forms.Label lblTempoDecorrido;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblUltimaExecucao;

@@ -12,13 +12,23 @@ using Certweb.Armazenamento.Modelo;
 
 namespace Certweb {
     public partial class Painel : UserControl {
+        public static PainelModel Modelo { get; set; }
+
         public Painel() {
             InitializeComponent();
+            Modelo = new PainelModel();
+            Modelo.QuantidadeErros = 0;
         }
 
         public void QuantidadeLinks() {
             List<Link> lista = GerenciadorLinks.LerLinks();
             lblQuantidade.Text = lista.Count.ToString();
+        }
+
+        public void AtualizarTextoTela() {
+            lblErrosOcorridos.Text = Painel.Modelo.QuantidadeErros.ToString();
+            lblTempoDecorrido.Text = Painel.Modelo.TempoDecorrido.ToString("ss") + "s";
+            lblUltimaExecucao.Text = Painel.Modelo.UltimaExecucao.ToString("HH:mm");
         }
     }
 }

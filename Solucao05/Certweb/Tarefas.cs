@@ -10,11 +10,18 @@ using System.Windows.Forms;
 using Certweb.Armazenamento.Arquivo;
 using Certweb.Armazenamento.Modelo;
 using Certweb.Internet;
+using System.Diagnostics;
 
 namespace Certweb {
     public partial class Tarefas : UserControl {
-        public Tarefas() {
+
+        private Painel _painel;
+
+        public Tarefas(Painel painel) {
             InitializeComponent();
+
+            _painel = painel;
+
             CarregarLinks();
         }
 
@@ -41,10 +48,22 @@ namespace Certweb {
         }
 
         private void button1_Click(object sender, EventArgs e) {
+            Stopwatch sw = new Stopwatch();
+
+            sw.Start();
             List<Link> lista = GerenciadorLinks.LerLinks();
             foreach(var link in lista) {
                 GerenciadorDeAcesso.AcessarLink(link.Endereco);
             }
+            sw.Stop();
+
+            //sw.Elapsed.ToString("mm");
+
+            Painel.Modelo.TempoDecorrido = sw.Elapsed;
+            Painel.Modelo.UltimaExecucao = DateTime.Now;
+
+            _painel.AtualizarTextoTela();
+
             MessageBox.Show("Sucesso!");
         }
     }
