@@ -15,11 +15,13 @@ namespace Certweb {
 
         private Link LinkEmEdicao { get; set; }
         private Tarefas _tarefa;
+        private Painel _painel;
 
-        public Links(Tarefas tarefas) {
+        public Links(Tarefas tarefas, Painel painel) {
             InitializeComponent();
 
             _tarefa = tarefas;
+            _painel = painel;
             CarregarLinks();
         }
 
@@ -39,6 +41,8 @@ namespace Certweb {
 
         private void CarregarLinks() {
             _tarefa.CarregarLinks();
+            _painel.QuantidadeLinks();
+
             pnFlowLinks.Controls.Clear();
             List<Link> lista = GerenciadorLinks.LerLinks();
 

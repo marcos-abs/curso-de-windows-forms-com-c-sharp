@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Certweb.Armazenamento.Arquivo;
 using Certweb.Armazenamento.Modelo;
+using Certweb.Internet;
 
 namespace Certweb {
     public partial class Tarefas : UserControl {
@@ -40,7 +41,11 @@ namespace Certweb {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-
+            List<Link> lista = GerenciadorLinks.LerLinks();
+            foreach(var link in lista) {
+                GerenciadorDeAcesso.AcessarLink(link.Endereco);
+            }
+            MessageBox.Show("Sucesso!");
         }
     }
 }
