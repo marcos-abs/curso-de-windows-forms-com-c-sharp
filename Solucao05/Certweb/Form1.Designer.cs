@@ -23,6 +23,7 @@
         /// o conteúdo deste método com o editor de código.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnDragDrop = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -33,14 +34,17 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnIndicador = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.pnPainel = new Certweb.Painel();
-            //this.pnTarefas = new Certweb.Tarefas(this.pnPainel);
+            this.CertwebSystemTray = new System.Windows.Forms.NotifyIcon(this.components);
+            this.MenuSystemTray = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.executarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fecharToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnTarefas = new Certweb.Tarefas();
-            //this.pnLinks = new Certweb.Links(this.pnTarefas, this.pnPainel);
-            this.pnLinks = new Certweb.Links();
             this.pnSobre = new Certweb.Sobre();
+            this.pnPainel = new Certweb.Painel();
+            this.pnLinks = new Certweb.Links();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.MenuSystemTray.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnDragDrop
@@ -169,6 +173,35 @@
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
+            // CertwebSystemTray
+            // 
+            this.CertwebSystemTray.ContextMenuStrip = this.MenuSystemTray;
+            this.CertwebSystemTray.Icon = ((System.Drawing.Icon)(resources.GetObject("CertwebSystemTray.Icon")));
+            this.CertwebSystemTray.Text = "Certweb Programa";
+            this.CertwebSystemTray.Visible = true;
+            // 
+            // MenuSystemTray
+            // 
+            this.MenuSystemTray.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.executarToolStripMenuItem,
+            this.fecharToolStripMenuItem});
+            this.MenuSystemTray.Name = "contextMenuStrip1";
+            this.MenuSystemTray.Size = new System.Drawing.Size(119, 48);
+            // 
+            // executarToolStripMenuItem
+            // 
+            this.executarToolStripMenuItem.Name = "executarToolStripMenuItem";
+            this.executarToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.executarToolStripMenuItem.Text = "Executar";
+            this.executarToolStripMenuItem.Click += new System.EventHandler(this.ExecutarTarefas);
+            // 
+            // fecharToolStripMenuItem
+            // 
+            this.fecharToolStripMenuItem.Name = "fecharToolStripMenuItem";
+            this.fecharToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.fecharToolStripMenuItem.Text = "Fechar";
+            this.fecharToolStripMenuItem.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
             // pnTarefas
             // 
             this.pnTarefas.Location = new System.Drawing.Point(269, 15);
@@ -216,6 +249,7 @@
             this.Text = "Form1";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.MenuSystemTray.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -235,6 +269,10 @@
         private Sobre pnSobre;
         private Tarefas pnTarefas;
         private System.Windows.Forms.Panel pnIndicador;
+        private System.Windows.Forms.ContextMenuStrip MenuSystemTray;
+        private System.Windows.Forms.ToolStripMenuItem executarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fecharToolStripMenuItem;
+        public System.Windows.Forms.NotifyIcon CertwebSystemTray;
     }
 }
 

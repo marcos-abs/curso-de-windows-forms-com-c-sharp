@@ -139,6 +139,7 @@
     <Content Include="Images\ic_painel.png" />
     <Content Include="Images\ic_sobre.png" />
     <Content Include="Images\ic_tarefas.png" />
+    <Content Include="Images\logo.ico" />
     <Content Include="Images\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

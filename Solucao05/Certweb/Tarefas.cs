@@ -17,12 +17,14 @@ namespace Certweb {
     public partial class Tarefas : UserControl {
 
         private Painel _painel;
+        private Form1 _form;
 
         public Tarefas() {
             InitializeComponent();
         }
 
-        public void SetPanels(Painel painel) {
+        public void SetPanels(Form1 form, Painel painel) {
+            _form = form;
             _painel = painel;
             CarregarLinks();
         }
@@ -49,13 +51,13 @@ namespace Certweb {
             }
         }
 
-        private void btnExecutar_Click(object sender, EventArgs e) {
+        public void btnExecutar_Click(object sender, EventArgs e) {
             Thread th = new Thread(Executar);
             th.IsBackground = true;
-            th.Start();
+            th.Start(_form);
         }
 
-        private void Executar() {
+        private void Executar(object _form) {
             Stopwatch sw = new Stopwatch();
 
             sw.Start();
@@ -86,7 +88,9 @@ namespace Certweb {
                     _painel.AtualizarTextoTela();
                 }));
             }
-            MessageBox.Show("Sucesso!");
+            ((Form1)_form).CertwebSystemTray.ShowBalloonTip(1000, "Certweb", "Tarefas realizadas com sucesso!", ToolTipIcon.Info);
+                
+            //MessageBox.Show("Sucesso!");
         }
     }
 }
