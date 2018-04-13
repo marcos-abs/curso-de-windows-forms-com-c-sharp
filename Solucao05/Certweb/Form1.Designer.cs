@@ -1,5 +1,5 @@
 ﻿namespace Certweb {
-    partial class Form1 {
+    partial class TelaInicial {
         /// <summary>
         /// Variável de designer necessária.
         /// </summary>
@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaInicial));
             this.pnDragDrop = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSobre = new System.Windows.Forms.Button();
@@ -49,8 +49,8 @@
             // 
             // pnDragDrop
             // 
-            resources.ApplyResources(this.pnDragDrop, "pnDragDrop");
             this.pnDragDrop.BackColor = System.Drawing.Color.Purple;
+            resources.ApplyResources(this.pnDragDrop, "pnDragDrop");
             this.pnDragDrop.Name = "pnDragDrop";
             this.pnDragDrop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnDragDrop_MouseDown);
             this.pnDragDrop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnDragDrop_MouseMove);
@@ -58,7 +58,6 @@
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.panel2.Controls.Add(this.btnSobre);
             this.panel2.Controls.Add(this.btnLinks);
@@ -66,13 +65,14 @@
             this.panel2.Controls.Add(this.btnPainel);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.pnIndicador);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // btnSobre
             // 
-            resources.ApplyResources(this.btnSobre, "btnSobre");
             this.btnSobre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.btnSobre.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnSobre, "btnSobre");
             this.btnSobre.ForeColor = System.Drawing.Color.White;
             this.btnSobre.Name = "btnSobre";
             this.btnSobre.UseVisualStyleBackColor = false;
@@ -80,9 +80,9 @@
             // 
             // btnLinks
             // 
-            resources.ApplyResources(this.btnLinks, "btnLinks");
             this.btnLinks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.btnLinks.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnLinks, "btnLinks");
             this.btnLinks.ForeColor = System.Drawing.Color.White;
             this.btnLinks.Name = "btnLinks";
             this.btnLinks.UseVisualStyleBackColor = false;
@@ -90,9 +90,9 @@
             // 
             // btnTarefas
             // 
-            resources.ApplyResources(this.btnTarefas, "btnTarefas");
             this.btnTarefas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.btnTarefas.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnTarefas, "btnTarefas");
             this.btnTarefas.ForeColor = System.Drawing.Color.White;
             this.btnTarefas.Name = "btnTarefas";
             this.btnTarefas.UseVisualStyleBackColor = false;
@@ -100,9 +100,9 @@
             // 
             // btnPainel
             // 
-            resources.ApplyResources(this.btnPainel, "btnPainel");
             this.btnPainel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.btnPainel.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnPainel, "btnPainel");
             this.btnPainel.ForeColor = System.Drawing.Color.White;
             this.btnPainel.Name = "btnPainel";
             this.btnPainel.UseVisualStyleBackColor = false;
@@ -116,41 +116,41 @@
             // 
             // pnIndicador
             // 
-            resources.ApplyResources(this.pnIndicador, "pnIndicador");
             this.pnIndicador.BackColor = System.Drawing.Color.Purple;
+            resources.ApplyResources(this.pnIndicador, "pnIndicador");
             this.pnIndicador.Name = "pnIndicador";
             // 
             // btnFechar
             // 
-            resources.ApplyResources(this.btnFechar, "btnFechar");
             this.btnFechar.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnFechar, "btnFechar");
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // CertwebSystemTray
             // 
-            resources.ApplyResources(this.CertwebSystemTray, "CertwebSystemTray");
             this.CertwebSystemTray.ContextMenuStrip = this.MenuSystemTray;
+            resources.ApplyResources(this.CertwebSystemTray, "CertwebSystemTray");
             // 
             // MenuSystemTray
             // 
-            resources.ApplyResources(this.MenuSystemTray, "MenuSystemTray");
             this.MenuSystemTray.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.executarToolStripMenuItem,
             this.fecharToolStripMenuItem});
             this.MenuSystemTray.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.MenuSystemTray, "MenuSystemTray");
             // 
             // executarToolStripMenuItem
             // 
-            resources.ApplyResources(this.executarToolStripMenuItem, "executarToolStripMenuItem");
             this.executarToolStripMenuItem.Name = "executarToolStripMenuItem";
+            resources.ApplyResources(this.executarToolStripMenuItem, "executarToolStripMenuItem");
             this.executarToolStripMenuItem.Click += new System.EventHandler(this.ExecutarTarefas);
             // 
             // fecharToolStripMenuItem
             // 
-            resources.ApplyResources(this.fecharToolStripMenuItem, "fecharToolStripMenuItem");
             this.fecharToolStripMenuItem.Name = "fecharToolStripMenuItem";
+            resources.ApplyResources(this.fecharToolStripMenuItem, "fecharToolStripMenuItem");
             this.fecharToolStripMenuItem.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // pnTarefas
@@ -160,8 +160,8 @@
             // 
             // pnSobre
             // 
-            resources.ApplyResources(this.pnSobre, "pnSobre");
             this.pnSobre.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.pnSobre, "pnSobre");
             this.pnSobre.Name = "pnSobre";
             // 
             // pnPainel
@@ -174,7 +174,7 @@
             resources.ApplyResources(this.pnLinks, "pnLinks");
             this.pnLinks.Name = "pnLinks";
             // 
-            // Form1
+            // TelaInicial
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -187,7 +187,7 @@
             this.Controls.Add(this.pnPainel);
             this.Controls.Add(this.pnLinks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "TelaInicial";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.MenuSystemTray.ResumeLayout(false);

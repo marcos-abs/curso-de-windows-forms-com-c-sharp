@@ -10,8 +10,8 @@ using System.Windows.Forms;
 using Certweb.Armazenamento.Arquivo;
 
 namespace Certweb {
-    public partial class Form1 : Form {
-        public Form1() {
+    public partial class TelaInicial : Form {
+        public TelaInicial() {
             GerenciadorLinks.LerLinks();
             InitializeComponent();
 
